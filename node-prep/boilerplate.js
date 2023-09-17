@@ -9,4 +9,12 @@ const folderName = process.argv[2] || "project"
 
 // console.log("After mkdir")
 
-fs.mkdirSync(folderName);
+try {
+    fs.mkdirSync(folderName);
+    fs.writeFileSync(`${folderName}/index.html`);
+    fs.writeFileSync(`${folderName}/app.js`);
+    fs.writeFileSync(`${folderName}/style.css`);
+} catch (e) {
+    console.log("Something went wrong!")
+    console.log(e);
+}
