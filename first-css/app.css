@@ -1,0 +1,84 @@
+* {
+    color: pink;
+}
+
+h1,
+h2 {
+    color: #ffafcc;
+    /* Cascade example */
+}
+
+h1,
+h2 {
+    color: lightpink;
+    /* Cascade example */
+}
+
+span {
+    color: #bde0fe;
+}
+
+.tag {
+    color: #cdb4db;
+    background-color: #a2d2ff;
+    font-size: 16px;
+}
+
+.post a {
+    color: #bde0fe;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a {
+    color: #cdb4db;
+}
+
+input[type="text"] {
+    color: #cdb4db;
+}
+
+/* Attribute selector too */
+a[herf*="puppies"] {
+    color: #cdb4db;
+}
+
+button {
+    font-size: 20px;
+    background-color: #cdb4db;
+}
+
+#signup {
+    color: #cdb4db;
+    background-color: #ffc8dd;
+}
+
+.post button:hover {
+    background-color: #a2d2ff;
+    color: #bde0fe;
+}
+
+button:hover {
+    background-color: #ffafcc !important;
+    font-weight: bold;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.post:nth-of-type(2n) {
+    background-color: #eddff5;
+}
+
+h2::first-letter {
+    font-size: 30px;
+}
+
+p::first-line {
+    color: #cdb4db;
+}
+
+::selection {
+    background-color: #85b7e6;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+
+<body>
+    <h1>Forms</h1>
+    <h2>The first form</h2>
+    <button>Outside the form</button>
+    <form action="/taco">
+        <!--
+            file:///taco?username=Zhiyi&password=1234&color=%2316c6e9&number=6
+        -->
+        <p>
+            <label for="username">Enter a username: </label>
+            <input type="text" name="username" id="username" placeholder="username">
+        </p>
+        <p>
+            <label for="password">Enter a password: </label>
+            <input type="password" name="password" id="password" placeholder="password">
+        </p>
+        <p>
+            <label for="coler">Choose a color: </label>
+            <input type="color" name="color" id="color">
+        </p>
+        <p>
+            <label>
+                Enter a number:
+                <input type="number" name="number" id="" placeholder="enter a number" min="0" max="20" step="2">
+            </label>
+        </p>
+        <p>
+            <label for="cheese">Do you like cheese? </label>
+            <input type="checkbox" name="cheese" id="cheese">
+        </p>
+        <button type="button">Do not submit the form</button>
+        <button>Submit!</button>
+        <!--default button type is "submit"-->
+        <input type="submit" value="Click me!" name="" id="">
+
+    </form>
+
+    <hr>
+    <h2>Hijacking searches</h2>
+    <!-- 
+        https://www.reddit.com/search/?q=cat
+    -->
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search/">
+        <input type="text" name="q">
+        <button>search Reddit</button>
+    </form>
+
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search/">
+        <input type="text" name="q" id="">
+        <button>search Google</button>
+    </form>
+
+    <!--
+        https://www.youtube.com/results?search_query=cat
+    -->
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" id="">
+        <button>search Youtube</button>
+    </form>
+
+    <hr>
+    <h2>More inputs!</h2>
+    <form action="/pizza">
+        <input type="checkbox" name="like" id="like" checked>
+        <label for="like">Yes, I like pizza</label>
+
+        <p>
+            <label for="small">Small</label>
+            <input type="radio" name="size" id="small" value="small">
+            <label for="medium">Medium</label>
+            <input type="radio" name="size" id="medium" value="medium">
+            <label for="Large">Large</label>
+            <input type="radio" name="size" id="large" value="large">
+            <!-- "type radio"s have the same name, can only choose 1 among 3-->
+        </p>
+        <p>
+            <label for="sauce">Select a sauce</label>
+            <select name="sauce" id="sauce">
+                <option value="tomato">Robust Inspired Tomato Sauce</option>
+                <option value="marinara">Hearty Marinara Sauce</option>
+                <option value="bbq">Honey BBQ Sauce</option>
+            </select>
+        </p>
+        <p>
+            <label for="pizza_amount">How many pizzas you want?</label>
+            <input type="range" name="pizza_amount" id="pizza_amount" min="1" max="10" value="5">
+        </p>
+        <p>
+            <label for="request">Any Special Requests?</label>
+            <textarea name="request" id="request" cols="30" rows="10"
+                placeholder="We will try our best to accomodate"></textarea>
+        </p>
+        <button>Finish!</button>
+        <!-- submit: file:///pizza?like=on&size=medium -->
+    </form>
+
+</body>
+
+</html>

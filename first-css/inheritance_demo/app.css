@@ -1,0 +1,18 @@
+body {
+    color: #6d6875;
+}
+
+section {
+    color: #b5838d;
+    /* set specifically, overwrite parent's style */
+}
+
+form {
+    color: #e5989b;
+}
+
+button,
+input {
+    color: inherit;
+    /* inherit form the closest parent */
+}
