@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-app.use(() => {
-    console.log("We got a new request!")
+app.use((req, res) => {
+    res.send('<h1>This is the webpage you requested</h>');
 })
 
 app.listen(3000, () => {
